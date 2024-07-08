@@ -1,4 +1,5 @@
-opencv-python-headless==4.5.3.56
-protobuf~=3.19.0
+protobuf==4.25.3
 tensorflow==2.16.1
 numpy==1.24.3
+streamlit==1.36.0
+
