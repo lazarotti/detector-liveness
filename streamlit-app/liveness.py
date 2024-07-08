@@ -42,7 +42,7 @@ print("TensorFlow version:", tf.__version__)
 print("Keras version:", tf.keras.__version__)
 
 with st.spinner('Carregando o modelo...'):
-    model = load_model('../modelos/modelX.keras')
+    model = load_model(model_path)
     # Simula um tempo de carregamento
     time.sleep(2)
 
