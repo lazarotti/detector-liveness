@@ -8,21 +8,6 @@ from tensorflow.keras.models import load_model
 
 import os
 
-# Caminho absoluto para o diretório onde o script está localizado
-script_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(script_dir, '..', 'modelos', 'modelX.keras')
-
-print("script_dir", script_dir)
-print("model_path", model_path)
-
-# Listar diretórios e arquivos para depuração
-st.write("Conteúdo do diretório atual:")
-st.write(os.listdir(script_dir))
-st.write("Conteúdo do diretório modelos:")
-st.write(os.listdir(os.path.join(script_dir, '..', 'modelos')))
-
-print("Keras version:", tf.keras.__version__)
-
 """
 # Computer Vision
 ## Liveness Detection
@@ -35,11 +20,12 @@ exibir sua probabilidade da classe de predição.
 
 """
 
+# Caminho absoluto para o diretório onde o script esta localizado
+script_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(script_dir, '..', 'modelos', 'modelX.keras')
+
 # Carregar o modelo salvo
 # Exibe uma animação de carregamento enquanto o modelo está sendo carregado
-
-print("TensorFlow version:", tf.__version__)
-print("Keras version:", tf.keras.__version__)
 
 with st.spinner('Carregando o modelo...'):
     model = load_model(model_path)
